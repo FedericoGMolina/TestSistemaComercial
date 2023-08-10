@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace TestSistemaComercial
 {
@@ -35,18 +36,6 @@ namespace TestSistemaComercial
             //Problema a solucionar
             if (txtUsuarioLogin.Text == "" || txtContraseñaLogin.Text == "")
                 MessageBox.Show("Por favor, complete los campos solicitados.");
-
-            if (!Regex.Match(txtUsuarioLogin.Text, "[a-zA-Z]").Success)
-            {
-                MessageBox.Show("(Campo Usuario): Caracteres invalidos ingresados. Asegurese de ingresar un Usuario de la a-z y/o A-Z");
-                txtUsuarioLogin.Focus();
-            }
-
-            if (!Regex.Match(txtContraseñaLogin.Text, "[a-zA-Z0-9ñÑ]").Success)
-            {
-                MessageBox.Show("(Campo Contraseña): Caracteres invalidos ingresados. Asegurese de ingresar solo este tipo de caracteres: [a-z_A-Z] y/o [0-9]");
-                txtContraseñaLogin.Focus();
-            }
             //Problema a solucionar
         }
         //Pendiente
@@ -73,6 +62,24 @@ namespace TestSistemaComercial
 
             if (resp == DialogResult.OK)
                 Application.Exit();
+        }
+
+        private void txtUsuarioLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"[^a-zA-Z0-9Ññ\s]");
+            if (!char.IsControl(e.KeyChar) && regex.IsMatch(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar != '\b' && e.KeyChar == ' ' && regex.IsMatch(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+
+            if (!regex.IsMatch(e.KeyChar.ToString()))
+            {
+                txtUsuarioLogin.Tag = Brushes.Red;
+            }
         }
     }
 }

@@ -51,9 +51,10 @@ namespace TestSistemaComercial
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(23, 492);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(17, 263);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(124, 38);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(93, 31);
             this.btnIniciarSesion.TabIndex = 18;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -80,14 +81,13 @@ namespace TestSistemaComercial
             this.btnRegistrarse.IconVisible = true;
             this.btnRegistrarse.IconZoom = 90D;
             this.btnRegistrarse.IsTab = false;
-            this.btnRegistrarse.Location = new System.Drawing.Point(334, 492);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarse.Location = new System.Drawing.Point(250, 263);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnRegistrarse.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRegistrarse.selected = false;
-            this.btnRegistrarse.Size = new System.Drawing.Size(138, 38);
+            this.btnRegistrarse.Size = new System.Drawing.Size(104, 31);
             this.btnRegistrarse.TabIndex = 17;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,9 +100,10 @@ namespace TestSistemaComercial
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(135, 9);
+            this.label3.Location = new System.Drawing.Point(101, 7);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 39);
+            this.label3.Size = new System.Drawing.Size(244, 33);
             this.label3.TabIndex = 16;
             this.label3.Text = "Sistema Comercial";
             // 
@@ -113,9 +114,10 @@ namespace TestSistemaComercial
             this.btnSalirRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalirRegister.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirRegister.ForeColor = System.Drawing.Color.White;
-            this.btnSalirRegister.Location = new System.Drawing.Point(479, 492);
+            this.btnSalirRegister.Location = new System.Drawing.Point(359, 263);
+            this.btnSalirRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalirRegister.Name = "btnSalirRegister";
-            this.btnSalirRegister.Size = new System.Drawing.Size(88, 38);
+            this.btnSalirRegister.Size = new System.Drawing.Size(66, 31);
             this.btnSalirRegister.TabIndex = 15;
             this.btnSalirRegister.Text = "Salir";
             this.btnSalirRegister.UseVisualStyleBackColor = false;
@@ -128,9 +130,10 @@ namespace TestSistemaComercial
             this.btnCancelarRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarRegister.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarRegister.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarRegister.Location = new System.Drawing.Point(236, 492);
+            this.btnCancelarRegister.Location = new System.Drawing.Point(177, 263);
+            this.btnCancelarRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelarRegister.Name = "btnCancelarRegister";
-            this.btnCancelarRegister.Size = new System.Drawing.Size(91, 38);
+            this.btnCancelarRegister.Size = new System.Drawing.Size(68, 31);
             this.btnCancelarRegister.TabIndex = 14;
             this.btnCancelarRegister.Text = "Cancelar";
             this.btnCancelarRegister.UseVisualStyleBackColor = false;
@@ -141,9 +144,10 @@ namespace TestSistemaComercial
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(122, 251);
+            this.label2.Location = new System.Drawing.Point(92, 204);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 24);
+            this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 13;
             this.label2.Text = "Contraseña";
             // 
@@ -152,9 +156,10 @@ namespace TestSistemaComercial
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(157, 184);
+            this.label1.Location = new System.Drawing.Point(118, 150);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "Usuario";
             // 
@@ -164,9 +169,10 @@ namespace TestSistemaComercial
             this.txtContraseñaRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaRegister.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaRegister.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseñaRegister.Location = new System.Drawing.Point(255, 256);
+            this.txtContraseñaRegister.Location = new System.Drawing.Point(191, 208);
+            this.txtContraseñaRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseñaRegister.Name = "txtContraseñaRegister";
-            this.txtContraseñaRegister.Size = new System.Drawing.Size(261, 19);
+            this.txtContraseñaRegister.Size = new System.Drawing.Size(196, 15);
             this.txtContraseñaRegister.TabIndex = 11;
             this.txtContraseñaRegister.UseSystemPasswordChar = true;
             // 
@@ -176,9 +182,10 @@ namespace TestSistemaComercial
             this.txtUsuarioRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuarioRegister.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioRegister.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuarioRegister.Location = new System.Drawing.Point(255, 189);
+            this.txtUsuarioRegister.Location = new System.Drawing.Point(191, 154);
+            this.txtUsuarioRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuarioRegister.Name = "txtUsuarioRegister";
-            this.txtUsuarioRegister.Size = new System.Drawing.Size(261, 19);
+            this.txtUsuarioRegister.Size = new System.Drawing.Size(196, 15);
             this.txtUsuarioRegister.TabIndex = 10;
             // 
             // label4
@@ -186,9 +193,10 @@ namespace TestSistemaComercial
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(231, 64);
+            this.label4.Location = new System.Drawing.Point(173, 52);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 29);
+            this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 19;
             this.label4.Text = "Register";
             // 
@@ -197,9 +205,10 @@ namespace TestSistemaComercial
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(80, 128);
+            this.label5.Location = new System.Drawing.Point(60, 104);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 24);
+            this.label5.Size = new System.Drawing.Size(126, 19);
             this.label5.TabIndex = 21;
             this.label5.Text = "Nro. Documento";
             // 
@@ -209,17 +218,18 @@ namespace TestSistemaComercial
             this.txtDocumentoRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDocumentoRegister.Font = new System.Drawing.Font("Roboto Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentoRegister.ForeColor = System.Drawing.Color.Black;
-            this.txtDocumentoRegister.Location = new System.Drawing.Point(255, 128);
+            this.txtDocumentoRegister.Location = new System.Drawing.Point(191, 104);
+            this.txtDocumentoRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDocumentoRegister.Name = "txtDocumentoRegister";
-            this.txtDocumentoRegister.Size = new System.Drawing.Size(261, 19);
+            this.txtDocumentoRegister.Size = new System.Drawing.Size(196, 15);
             this.txtDocumentoRegister.TabIndex = 20;
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(578, 542);
+            this.ClientSize = new System.Drawing.Size(434, 306);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDocumentoRegister);
             this.Controls.Add(this.label4);
@@ -233,6 +243,7 @@ namespace TestSistemaComercial
             this.Controls.Add(this.txtContraseñaRegister);
             this.Controls.Add(this.txtUsuarioRegister);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
