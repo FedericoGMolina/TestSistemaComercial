@@ -66,20 +66,17 @@ namespace TestSistemaComercial
 
         private void txtUsuarioLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Regex regex = new Regex(@"[^a-zA-Z0-9Ññ\s]");
+            Regex regex = new Regex(@"\W");
             if (!char.IsControl(e.KeyChar) && regex.IsMatch(e.KeyChar.ToString()))
             {
                 e.Handled = true;
-            }
-            if (e.KeyChar != '\b' && e.KeyChar == ' ' && regex.IsMatch(e.KeyChar.ToString()))
-            {
-                e.Handled = true;
+                txtUsuarioLogin.BackColor = Color.Red;
             }
 
-            if (!regex.IsMatch(e.KeyChar.ToString()))
-            {
-                txtUsuarioLogin.Tag = Brushes.Red;
-            }
+            else
+                txtUsuarioLogin.BackColor = Color.White;
+            if (e.KeyChar != '\b' && e.KeyChar == ' ' && regex.IsMatch(e.KeyChar.ToString()))
+                e.Handled = true;
         }
     }
 }
