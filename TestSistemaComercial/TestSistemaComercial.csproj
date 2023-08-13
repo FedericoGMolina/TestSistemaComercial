@@ -56,6 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\controlSesion.cs" />
+    <Compile Include="Clases\modeloSesion.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Interfaces\Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +73,12 @@
       <DependentUpon>LoginTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Program.cs" />
+    <Compile Include="Interfaces\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\LoginTest.resx">
       <DependentUpon>LoginTest.cs</DependentUpon>

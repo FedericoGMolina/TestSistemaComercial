@@ -15,30 +15,42 @@ namespace TestSistemaComercial
 {
     public partial class LoginTest : Form
     {
-        private string servidor = "datasource = 127.0.0.1";
-        private string puerto = "port = 3306";
-        private string username = "username = root";
-        private string password = "password = ";
-        private string bd = "database = test";
-        public LoginTest()
-        {
-            InitializeComponent();
-        }
-        public MySqlConnection getConexion()
-        {
-            string cadenaConexion = servidor + ";" + puerto + ";" +
-            username + ";" + password + ";" + bd;
-            return new MySqlConnection(cadenaConexion);
-        }
-        //Pendiente
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Problema a solucionar
             if (txtUsuarioLogin.Text == "" || txtContraseñaLogin.Text == "")
                 MessageBox.Show("Por favor, complete los campos solicitados.");
-            //Problema a solucionar
+
+            try
+            {
+                String usuario = txtUsuarioLogin.Text;
+                String pass = txtContraseñaLogin.Text;
+                controlSesion control = new controlSesion();
+                String respuestaControlador = control.ctrlLogin(usuario, pass);
+                if (respuestaControlador == "¡Bienvenido!")
+                {
+                    MessageBox.Show(control.ctrlLogin(usuario, pass), "Control de usuarios",
+                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Principal p = new Principal();
+                    this.Visible = false; //Oculta el formulario de inicio de sesión.
+                    p.Show();
+                }
+                else
+                {
+                    MessageBox.Show(respuestaControlador, "Control de usuarios",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (txtUsuarioLogin.Text == "")
+                        txtUsuarioLogin.Focus();
+                    else
+                        txtPasswordLogin.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
-        //Pendiente
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Register register = new Register();
