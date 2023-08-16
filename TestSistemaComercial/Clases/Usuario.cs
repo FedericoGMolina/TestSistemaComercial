@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestSistemaComercial.Clases
+namespace TestSistemaComercial
 {
-    class Usuario
+    public class Usuario
     {
         private int id;
         private string usuario;

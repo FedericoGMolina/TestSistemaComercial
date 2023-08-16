@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace TestSistemaComercial.Clases
+namespace TestSistemaComercial
 {
     public class Conexion
     {
@@ -16,7 +16,7 @@ namespace TestSistemaComercial.Clases
         private string password = "password = ";
         private string bd = "database = test";
 
-        public MySqlConnection getConexion()
+        public MySqlConnection GetConexion()
         {
             string cadenaConexion = servidor + ";" + puerto + ";" +
             username + ";" + password + ";" + bd;

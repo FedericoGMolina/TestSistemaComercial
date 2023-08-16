@@ -15,12 +15,14 @@ namespace TestSistemaComercial
 {
     public partial class LoginTest : Form
     {
-       
+       public LoginTest()
+        {
+            InitializeComponent();
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsuarioLogin.Text == "" || txtContraseñaLogin.Text == "")
                 MessageBox.Show("Por favor, complete los campos solicitados.");
-
             try
             {
                 String usuario = txtUsuarioLogin.Text;
@@ -43,7 +45,7 @@ namespace TestSistemaComercial
                     if (txtUsuarioLogin.Text == "")
                         txtUsuarioLogin.Focus();
                     else
-                        txtPasswordLogin.Focus();
+                        txtContraseñaLogin.Focus();
                 }
             }
             catch (Exception ex)
@@ -71,7 +73,6 @@ namespace TestSistemaComercial
         {
             DialogResult resp = MessageBox.Show("¿Desea cerrar el programa?", "Sistema Comercial (Login)", MessageBoxButtons.OKCancel,
             MessageBoxIcon.Question);
-
             if (resp == DialogResult.OK)
                 Application.Exit();
         }
@@ -84,7 +85,6 @@ namespace TestSistemaComercial
                 e.Handled = true;
                 txtUsuarioLogin.BackColor = Color.Red;
             }
-
             else
                 txtUsuarioLogin.BackColor = Color.White;
             if (e.KeyChar != '\b' && e.KeyChar == ' ' && regex.IsMatch(e.KeyChar.ToString()))

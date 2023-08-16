@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-namespace TestSistemaComercial.Clases
+
+namespace TestSistemaComercial
 {
     public class controlSesion
     {
@@ -30,7 +31,7 @@ namespace TestSistemaComercial.Clases
             }
             return rta;
         }
-        private string generarSHA1(string cadena)
+        public string generarSHA1(string cadena)
         {
             UTF8Encoding enc = new UTF8Encoding();
             byte[] data = enc.GetBytes(cadena);
@@ -45,6 +46,21 @@ namespace TestSistemaComercial.Clases
                 sb.Append(result[i].ToString("x"));
             }
             return sb.ToString();
+        }
+        public string RegistrarUsuario(Usuario usuario)
+        {
+            modeloSesion modelo = new modeloSesion();
+            if (modelo.UsuarioExiste(usuario.user))
+            {
+                return "El nombre de usuario ya está en uso.";
+            }
+
+            if (modelo.RegistrarUsuario(usuario))
+            {
+                return "¡Usuario registrado correctamente!";
+            }
+
+            return "Ha ocurrido un error durante el registro.";
         }
     }
 }

@@ -42,7 +42,34 @@ namespace TestSistemaComercial
         }
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsuarioRegister.Text;
+            string contraseña = txtContraseñaRegister.Text;
+            // Otros campos necesarios para el registro
 
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Registro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Usuario nuevoUsuario = new Usuario();
+
+            controlSesion control = new controlSesion();
+            nuevoUsuario.Id = 124;
+            nuevoUsuario.user = usuario;
+            nuevoUsuario.Password = control.generarSHA1(contraseña);
+            nuevoUsuario.PasswordConfirma = control.generarSHA1(contraseña);
+            nuevoUsuario.Nombre = usuario;
+            nuevoUsuario.IdTipo = 1;
+
+            string respuesta = control.RegistrarUsuario(nuevoUsuario);
+
+            MessageBox.Show(respuesta, "Registro", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+            if (respuesta == "¡Usuario registrado correctamente!")
+                this.Close();
         }
     }
 }
