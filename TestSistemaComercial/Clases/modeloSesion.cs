@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
+using System.Windows.Forms;
 namespace TestSistemaComercial
 {
     class modeloSesion
@@ -52,18 +52,23 @@ namespace TestSistemaComercial
         public bool RegistrarUsuario(Usuario usuario)
         {
             miConexion.Open();
-            sql = "INSERT INTO usuarios (User, Password, Nombre, idTipoUser) " +
-                  "VALUES (@User, @Password, @Nombre, @idTipoUser)";
+            sql = "INSERT INTO usuarios (User, Password) " +
+                  "VALUES (@User, @Password)";
             comando = new MySqlCommand(sql, miConexion);
             comando.Parameters.AddWithValue("@User", usuario.user);
             comando.Parameters.AddWithValue("@Password", usuario.Password);
-            comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-            comando.Parameters.AddWithValue("@idTipoUser", usuario.IdTipo);
+            try
+            {
+                int rowsAffected = comando.ExecuteNonQuery();
+                miConexion.Close();
 
-            int? rowsAffected = comando.ExecuteNonQuery();
-            miConexion.Close();
-
-            return rowsAffected > 0;
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar usuario: " + ex.Message);
+                return false;
+            }
         }
     }
 }

@@ -35,8 +35,11 @@ namespace TestSistemaComercial
                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Principal p = new Principal();
-                    this.Visible = false; //Oculta el formulario de inicio de sesión.
-                    p.Show();
+                    this.Hide(); //Oculta el formulario de inicio de sesión.
+                    p.ShowDialog();
+                    txtContraseñaLogin.Text = "";
+                    txtUsuarioLogin.Text = "";
+                    this.Show();
                 }
                 else
                 {
@@ -56,9 +59,10 @@ namespace TestSistemaComercial
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Register register = new Register();
-            register.Show();
             this.Hide();
-            register.FormClosing += register_closing;
+            register.ShowDialog();
+            this.Show();
+//            register.FormClosing += register_closing;
         }
         private void register_closing(object sender, FormClosingEventArgs e)
         {

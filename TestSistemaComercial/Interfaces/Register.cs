@@ -25,7 +25,7 @@ namespace TestSistemaComercial
 
             if (resp == DialogResult.OK)
             {
-                this.Close();
+                Application.Exit();
             }
         }
 
@@ -58,7 +58,7 @@ namespace TestSistemaComercial
             controlSesion control = new controlSesion();
             nuevoUsuario.Id = 124;
             nuevoUsuario.user = usuario;
-            nuevoUsuario.Password = control.generarSHA1(contraseña);
+            nuevoUsuario.Password = contraseña;
             nuevoUsuario.PasswordConfirma = control.generarSHA1(contraseña);
             nuevoUsuario.Nombre = usuario;
             nuevoUsuario.IdTipo = 1;

@@ -21,7 +21,7 @@ namespace TestSistemaComercial
                 Usuario userResult = modelo.miUsuario(usuario);
                 if (userResult != null)
                 {
-                    if (userResult.Password == generarSHA1(pass))
+                    if (userResult.Password == pass)
                         rta = "¡Bienvenido!";
                     else
                         rta = "Clave incorrecta";
