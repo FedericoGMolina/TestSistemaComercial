@@ -79,6 +79,7 @@
     <Compile Include="Interfaces\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\modeloUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\LoginTest.resx">
       <DependentUpon>LoginTest.cs</DependentUpon>

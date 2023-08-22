@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace TestSistemaComercial
 {
     public partial class Principal : Form
@@ -15,6 +14,20 @@ namespace TestSistemaComercial
         public Principal()
         {
             InitializeComponent();
+            cargaDataGrid();
+        }
+
+        private void cargaDataGrid()
+        {
+            dataGridView.DataSource = null;
+            modeloUsuarios m = new modeloUsuarios();
+            dataGridView.DataSource = m.obtenerUsuarios();
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+
+        private void cargarUsuarios()
+        {
+
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

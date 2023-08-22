@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+
 namespace TestSistemaComercial
 {
     class modeloSesion
@@ -45,7 +46,6 @@ namespace TestSistemaComercial
             comando.Parameters.AddWithValue("@User", usuario);
             int count = Convert.ToInt32(comando.ExecuteScalar());
             miConexion.Close();
-
             return count > 0;
         }
 

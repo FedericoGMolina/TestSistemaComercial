@@ -25,6 +25,7 @@ namespace TestSistemaComercial
 
             if (resp == DialogResult.OK)
             {
+                this.Close();
                 Application.Exit();
             }
         }
