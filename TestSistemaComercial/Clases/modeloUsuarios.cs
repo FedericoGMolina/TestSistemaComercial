@@ -15,8 +15,7 @@ namespace TestSistemaComercial
         public DataTable obtenerUsuarios()
         {
             miConexion.Open();
-            sql = "SELECT CONCAT(User, '-', u.Nombre) AS Socio, tp.Nombre AS 'Tipo Usuario' " + "FROM usuarios u " +
-                 "INNER JOIN tipousuarios tp ON u.idTipoUser = tp.idTipo";
+            sql = "SELECT user, documento FROM usuarios";
 
             MySqlCommand comando = new MySqlCommand(sql, miConexion);
             MySqlDataAdapter adapter = new MySqlDataAdapter();

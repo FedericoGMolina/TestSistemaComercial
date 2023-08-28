@@ -13,6 +13,7 @@ namespace TestSistemaComercial
         private string password;
         private string passwordConfirma;
         private string nombre;
+        private string documento;
         private int idTipo;
 
         public int Id { get => id; set => id = value; }
@@ -23,6 +24,7 @@ namespace TestSistemaComercial
             get => passwordConfirma; set =>
             passwordConfirma = value;
         }
+        public string Documento { get => documento; set => documento = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public int IdTipo { get => idTipo; set => idTipo = value; }
     }

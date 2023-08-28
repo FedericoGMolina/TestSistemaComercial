@@ -51,12 +51,14 @@ namespace TestSistemaComercial
 
         public bool RegistrarUsuario(Usuario usuario)
         {
+
             miConexion.Open();
-            sql = "INSERT INTO usuarios (User, Password) " +
-                  "VALUES (@User, @Password)";
+            sql = "INSERT INTO usuarios (User, Password, Documento) " +
+                  "VALUES (@User, @Password, @Documento)";
             comando = new MySqlCommand(sql, miConexion);
             comando.Parameters.AddWithValue("@User", usuario.user);
             comando.Parameters.AddWithValue("@Password", usuario.Password);
+            comando.Parameters.AddWithValue("@Documento", usuario.Documento);
             try
             {
                 int rowsAffected = comando.ExecuteNonQuery();

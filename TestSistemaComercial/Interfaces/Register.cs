@@ -45,6 +45,7 @@ namespace TestSistemaComercial
         {
             string usuario = txtUsuarioRegister.Text;
             string contraseña = txtContraseñaRegister.Text;
+            string documento = txtDocumentoRegister.Text;
             // Otros campos necesarios para el registro
 
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
@@ -63,6 +64,8 @@ namespace TestSistemaComercial
             nuevoUsuario.PasswordConfirma = control.generarSHA1(contraseña);
             nuevoUsuario.Nombre = usuario;
             nuevoUsuario.IdTipo = 1;
+            nuevoUsuario.Documento = documento;
+
 
             string respuesta = control.RegistrarUsuario(nuevoUsuario);
 

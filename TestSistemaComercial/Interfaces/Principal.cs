@@ -25,11 +25,6 @@ namespace TestSistemaComercial
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
-        private void cargarUsuarios()
-        {
-
-        }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
