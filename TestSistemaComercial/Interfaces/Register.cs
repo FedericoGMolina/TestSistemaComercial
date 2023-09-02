@@ -61,7 +61,7 @@ namespace TestSistemaComercial
             nuevoUsuario.Id = 124;
             nuevoUsuario.user = usuario;
             nuevoUsuario.Password = contraseña;
-            nuevoUsuario.PasswordConfirma = control.generarSHA1(contraseña);
+            //nuevoUsuario.PasswordConfirma = control.generarSHA1(contraseña);
             nuevoUsuario.Nombre = usuario;
             nuevoUsuario.IdTipo = 1;
             nuevoUsuario.Documento = documento;

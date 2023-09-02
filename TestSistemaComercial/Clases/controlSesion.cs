@@ -9,7 +9,7 @@ namespace TestSistemaComercial
 {
     public class controlSesion
     {
-        public string ctrlLogin(String usuario, String pass)
+        public string ctrlLogin(string usuario, string pass)
         {
             modeloSesion modelo = new modeloSesion();
             string rta = "";
@@ -31,7 +31,7 @@ namespace TestSistemaComercial
             }
             return rta;
         }
-        public string generarSHA1(string cadena)
+        public string generarCifrado(string cadena)
         {
             UTF8Encoding enc = new UTF8Encoding();
             byte[] data = enc.GetBytes(cadena);

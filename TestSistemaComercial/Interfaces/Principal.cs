@@ -11,23 +11,35 @@ namespace TestSistemaComercial
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(string usuario)
         {
             InitializeComponent();
-            cargaDataGrid();
+            labelNombreUsuario.Text = usuario;            
         }
-
-        private void cargaDataGrid()
-        {
-            dataGridView.DataSource = null;
-            modeloUsuarios m = new modeloUsuarios();
-            dataGridView.DataSource = m.obtenerUsuarios();
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-        }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            Personal personal = new Personal();
+            abrirFormularioHijo(personal);
+        }
+
+        private Form activeForm = null;
+        private void abrirFormularioHijo(Form formularioHijo)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panel1.Controls.Add(formularioHijo);
+            panel1.Tag = formularioHijo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
         }
     }
 }

@@ -25,20 +25,21 @@ namespace TestSistemaComercial
                 MessageBox.Show("Por favor, complete los campos solicitados.");
             try
             {
-                String usuario = txtUsuarioLogin.Text;
-                String pass = txtContraseñaLogin.Text;
+                string usuario = txtUsuarioLogin.Text;
+                string pass = txtContraseñaLogin.Text;
                 controlSesion control = new controlSesion();
-                String respuestaControlador = control.ctrlLogin(usuario, pass);
+                string respuestaControlador = control.ctrlLogin(usuario, pass);
                 if (respuestaControlador == "¡Bienvenido!")
                 {
                     MessageBox.Show(control.ctrlLogin(usuario, pass), "Control de usuarios",
                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Principal p = new Principal();
+                    Principal p = new Principal(txtUsuarioLogin.Text);
                     this.Hide(); //Oculta el formulario de inicio de sesión.
                     p.ShowDialog();
                     txtContraseñaLogin.Text = "";
                     txtUsuarioLogin.Text = "";
+                    
                     this.Show();
                 }
                 else
