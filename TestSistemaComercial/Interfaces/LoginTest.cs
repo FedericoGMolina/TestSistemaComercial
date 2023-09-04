@@ -95,5 +95,7 @@ namespace TestSistemaComercial
             if (e.KeyChar != '\b' && e.KeyChar == ' ' && regex.IsMatch(e.KeyChar.ToString()))
                 e.Handled = true;
         }
+
+
     }
 }

@@ -44,10 +44,10 @@ namespace TestSistemaComercial
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(450, 337);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(57, 404);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(128, 19);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(171, 23);
             this.btnCerrarSesion.TabIndex = 0;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -56,9 +56,10 @@ namespace TestSistemaComercial
             // btnPersonal
             // 
             this.btnPersonal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPersonal.Location = new System.Drawing.Point(0, 95);
+            this.btnPersonal.Location = new System.Drawing.Point(0, 117);
+            this.btnPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(207, 49);
+            this.btnPersonal.Size = new System.Drawing.Size(276, 60);
             this.btnPersonal.TabIndex = 1;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = true;
@@ -67,13 +68,15 @@ namespace TestSistemaComercial
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(213, 0);
+            this.panel1.Location = new System.Drawing.Point(277, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(387, 366);
+            this.panel1.Size = new System.Drawing.Size(516, 450);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
@@ -81,16 +84,18 @@ namespace TestSistemaComercial
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 366);
+            this.panel2.Size = new System.Drawing.Size(276, 450);
             this.panel2.TabIndex = 3;
             // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 242);
+            this.button3.Location = new System.Drawing.Point(0, 297);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 49);
+            this.button3.Size = new System.Drawing.Size(276, 60);
             this.button3.TabIndex = 5;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -98,9 +103,10 @@ namespace TestSistemaComercial
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 193);
+            this.button2.Location = new System.Drawing.Point(0, 237);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 49);
+            this.button2.Size = new System.Drawing.Size(276, 60);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@ namespace TestSistemaComercial
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 144);
+            this.button1.Location = new System.Drawing.Point(0, 177);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 49);
+            this.button1.Size = new System.Drawing.Size(276, 60);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -120,30 +127,31 @@ namespace TestSistemaComercial
             this.panel3.Controls.Add(this.labelNombreUsuario);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(207, 95);
+            this.panel3.Size = new System.Drawing.Size(276, 117);
             this.panel3.TabIndex = 0;
             // 
             // labelNombreUsuario
             // 
             this.labelNombreUsuario.AutoSize = true;
             this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreUsuario.Location = new System.Drawing.Point(76, 38);
+            this.labelNombreUsuario.Location = new System.Drawing.Point(101, 47);
+            this.labelNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(51, 20);
+            this.labelNombreUsuario.Size = new System.Drawing.Size(64, 25);
             this.labelNombreUsuario.TabIndex = 0;
             this.labelNombreUsuario.Text = "label1";
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(793, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnCerrarSesion);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Principal";
             this.Text = "Principal";
             this.panel2.ResumeLayout(false);
