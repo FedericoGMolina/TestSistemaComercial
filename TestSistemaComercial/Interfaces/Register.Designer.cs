@@ -29,9 +29,7 @@ namespace TestSistemaComercial
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.btnRegistrarse = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalirRegister = new System.Windows.Forms.Button();
             this.btnCancelarRegister = new System.Windows.Forms.Button();
@@ -42,6 +40,7 @@ namespace TestSistemaComercial
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDocumentoRegister = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIniciarSesion
@@ -59,42 +58,6 @@ namespace TestSistemaComercial
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-            // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnRegistrarse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegistrarse.BorderRadius = 0;
-            this.btnRegistrarse.ButtonText = "Registrarse";
-            this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarse.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRegistrarse.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegistrarse.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnRegistrarse.Iconimage")));
-            this.btnRegistrarse.Iconimage_right = null;
-            this.btnRegistrarse.Iconimage_right_Selected = null;
-            this.btnRegistrarse.Iconimage_Selected = null;
-            this.btnRegistrarse.IconMarginLeft = 0;
-            this.btnRegistrarse.IconMarginRight = 0;
-            this.btnRegistrarse.IconRightVisible = false;
-            this.btnRegistrarse.IconRightZoom = 0D;
-            this.btnRegistrarse.IconVisible = true;
-            this.btnRegistrarse.IconZoom = 90D;
-            this.btnRegistrarse.IsTab = false;
-            this.btnRegistrarse.Location = new System.Drawing.Point(333, 324);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnRegistrarse.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrarse.selected = false;
-            this.btnRegistrarse.Size = new System.Drawing.Size(139, 38);
-            this.btnRegistrarse.TabIndex = 17;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrarse.Textcolor = System.Drawing.Color.White;
-            this.btnRegistrarse.TextFont = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // label3
             // 
@@ -220,17 +183,34 @@ namespace TestSistemaComercial
             this.txtDocumentoRegister.Size = new System.Drawing.Size(261, 19);
             this.txtDocumentoRegister.TabIndex = 20;
             // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(358, 324);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(91, 38);
+            this.btnRegister.TabIndex = 22;
+            this.btnRegister.Text = "Registrarse";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
             // Register
             // 
+            this.AcceptButton = this.btnRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(579, 377);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDocumentoRegister);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSalirRegister);
             this.Controls.Add(this.btnCancelarRegister);
@@ -243,7 +223,6 @@ namespace TestSistemaComercial
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Register_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +231,6 @@ namespace TestSistemaComercial
         #endregion
 
         private System.Windows.Forms.Button btnIniciarSesion;
-        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrarse;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSalirRegister;
         private System.Windows.Forms.Button btnCancelarRegister;
@@ -263,5 +241,6 @@ namespace TestSistemaComercial
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDocumentoRegister;
+        private System.Windows.Forms.Button btnRegister;
     }
 }

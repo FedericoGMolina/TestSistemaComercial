@@ -29,11 +29,9 @@ namespace TestSistemaComercial
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginTest));
             this.btnSalirLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelarLogin = new System.Windows.Forms.Button();
-            this.btnLogin = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +39,7 @@ namespace TestSistemaComercial
             this.txtContraseñaLogin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUsuarioLogin = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalirLogin
@@ -85,42 +84,6 @@ namespace TestSistemaComercial
             this.btnCancelarLogin.Text = "Cancelar";
             this.btnCancelarLogin.UseVisualStyleBackColor = false;
             this.btnCancelarLogin.Click += new System.EventHandler(this.btnCancelarLogin_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogin.BorderRadius = 0;
-            this.btnLogin.ButtonText = "Login";
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.DisabledColor = System.Drawing.Color.Gray;
-            this.btnLogin.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogin.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogin.Iconimage")));
-            this.btnLogin.Iconimage_right = null;
-            this.btnLogin.Iconimage_right_Selected = null;
-            this.btnLogin.Iconimage_Selected = null;
-            this.btnLogin.IconMarginLeft = 0;
-            this.btnLogin.IconMarginRight = 0;
-            this.btnLogin.IconRightVisible = false;
-            this.btnLogin.IconRightZoom = 0D;
-            this.btnLogin.IconVisible = true;
-            this.btnLogin.IconZoom = 90D;
-            this.btnLogin.IsTab = false;
-            this.btnLogin.Location = new System.Drawing.Point(241, 249);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnLogin.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLogin.selected = false;
-            this.btnLogin.Size = new System.Drawing.Size(91, 38);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.Textcolor = System.Drawing.Color.White;
-            this.btnLogin.TextFont = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label2
             // 
@@ -209,12 +172,30 @@ namespace TestSistemaComercial
             this.txtUsuarioLogin.TabIndex = 1;
             this.txtUsuarioLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuarioLogin_KeyPress);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Green;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(238, 249);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(91, 38);
+            this.btnLogin.TabIndex = 12;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // LoginTest
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(433, 352);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtUsuarioLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSalirLogin);
@@ -223,7 +204,6 @@ namespace TestSistemaComercial
             this.Controls.Add(this.linkOlvidoContraseña);
             this.Controls.Add(this.btnCancelarLogin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -240,7 +220,6 @@ namespace TestSistemaComercial
         private System.Windows.Forms.Button btnSalirLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCancelarLogin;
-        private Bunifu.Framework.UI.BunifuFlatButton btnLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label label1;
@@ -248,6 +227,7 @@ namespace TestSistemaComercial
         private System.Windows.Forms.TextBox txtContraseñaLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUsuarioLogin;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

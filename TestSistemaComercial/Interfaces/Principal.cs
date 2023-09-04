@@ -15,7 +15,6 @@ namespace TestSistemaComercial
         {
             InitializeComponent();
             labelNombreUsuario.Text = usuario;      
-            this.Focus();
         }
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {

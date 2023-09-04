@@ -19,7 +19,7 @@ namespace TestSistemaComercial
         {
             InitializeComponent();
         }
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Login()
         {
             if (txtUsuarioLogin.Text == "" || txtContraseñaLogin.Text == "")
                 MessageBox.Show("Por favor, complete los campos solicitados.");
@@ -39,7 +39,7 @@ namespace TestSistemaComercial
                     p.ShowDialog();
                     txtContraseñaLogin.Text = "";
                     txtUsuarioLogin.Text = "";
-                    
+
                     this.Show();
                 }
                 else
@@ -57,6 +57,7 @@ namespace TestSistemaComercial
                 MessageBox.Show(ex.ToString());
             }
         }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Register register = new Register();
@@ -96,6 +97,9 @@ namespace TestSistemaComercial
                 e.Handled = true;
         }
 
-
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
     }
 }

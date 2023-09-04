@@ -75,19 +75,10 @@ namespace TestSistemaComercial
             if (respuesta == "¡Usuario registrado correctamente!")
                 this.Close();
         }
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             Registrarse();
-        }
-
-    
-
-        private void Register_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char) Keys.Enter)
-            {
-                Registrarse();
-            }
         }
     }
 }
